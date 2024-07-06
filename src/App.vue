@@ -7,13 +7,13 @@ const isOpen = ref(false)
 
 <template>
   <header class="border-b fixed backdrop-blur-sm w-full text-white">
-    <div class="header__wrapper w-4/5 my-0 mx-auto h-full py-3">
-      <nav class="flex justify-between">
-        <RouterLink
-          class="font-bold hover:text-white font-display text-purple-500 transition drop-shadow-xl shadow-white"
-          :to="{ name: 'news' }"
-          >ESNHub
-        </RouterLink>
+    <div class="header__wrapper w-4/5 my-0 mx-auto h-full py-3 flex justify-between">
+      <RouterLink
+        class="font-bold hover:text-white font-display text-purple-500 transition drop-shadow-xl shadow-white"
+        :to="{ name: 'news' }"
+        >ESNHub
+      </RouterLink>
+      <nav class="hidden justify-between md:flex">
         <ul class="flex gap-4">
           <li>
             <RouterLink class="hover:text-purple-500 font-display transition" :to="{ name: 'news' }"

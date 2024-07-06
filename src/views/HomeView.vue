@@ -21,7 +21,7 @@ onMounted(async () => {
       :to="{ name: 'article', params: { id: article.id } }"
       v-for="article in news"
       :key="article.id"
-      class="border-transparent p-4 rounded-xl w-3/5 flex flex-col gap-4 text-white font-display bg-zinc-800"
+      class="border-transparent p-4 rounded-xl md:w-3/5 flex flex-col gap-4 text-white font-display bg-zinc-800"
     >
       <h2 class="text-xl font-bold">{{ article.name }}</h2>
       <img :src="article.img" :key="article.id" alt="Article image" class="rounded-xl" />
