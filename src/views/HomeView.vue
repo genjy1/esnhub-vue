@@ -24,7 +24,7 @@ onMounted(async () => {
       class="border-transparent p-4 rounded-xl w-3/5 flex flex-col gap-4 text-white font-display bg-zinc-800"
     >
       <h2 class="text-xl font-bold">{{ article.name }}</h2>
-      <img :src="article.img" :key="article.id" alt="" />
+      <img :src="article.img" :key="article.id" alt="Article image" class="rounded-xl" />
       <p class="date-wrap">
         {{
           typeof article.date == 'string'
