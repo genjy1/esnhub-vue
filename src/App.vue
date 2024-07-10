@@ -21,7 +21,11 @@ const isOpen = ref(false)
             >
           </li>
           <li>
-            <RouterLink class="hover:text-purple-500 font-display transition">Статьи</RouterLink>
+            <RouterLink
+              class="hover:text-purple-500 font-display transition"
+              :to="{ name: 'articles' }"
+              >Статьи</RouterLink
+            >
           </li>
           <li>
             <RouterLink class="hover:text-purple-500 font-display transition">Турниры</RouterLink>

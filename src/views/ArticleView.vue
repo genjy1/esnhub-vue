@@ -5,11 +5,14 @@ import { useRoute } from 'vue-router'
 
 const article = ref({})
 const id = useRoute().params.id
+const isNews = useRoute().query
+// console.log('Сиська')
+console.log(isNews)
 
 onMounted(async () => {
   try {
     axios
-      .get(`https://twisty-efficacious-archeology.glitch.me/news/${id}`)
+      .get(`https://twisty-efficacious-archeology.glitch.me/${isNews ? 'articles' : 'news'}/${id}`)
       .then((response) => (article.value = response.data))
   } catch (error) {
     console.warn(error)
